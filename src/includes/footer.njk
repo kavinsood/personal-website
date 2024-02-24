@@ -25,6 +25,13 @@
             <a href="/blogroll/">Blogroll</a>
         </p>
 
+        <p class="footer__item footer__item--right u-desktop-only">
+            <strong>Last listened to</strong><br />
+            <div id="last-played">
+                <!-- Dynamic content will be inserted here -->
+            </div>
+        </p>
+
         <p class="footer__item footer__item--right">
             <a href="{{ site.repo }}/tree/master/{{ page.inputPath }}" class="footer__icon" title="Edit this page on Github">
                 <span class="sr-only">Edit this page on Github</span>
@@ -37,4 +44,37 @@
         </p>
 
     </div>
+    
+    <script>
+        // Function to fetch the last played track
+        async function fetchLastPlayed() {
+            const url = `https://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=Kavin05&api_key=dc458be772a2c1beb5cb3d4878975dfa&format=json&limit=1`;
+
+            try {
+                const response = await fetch(url);
+                const data = await response.json();
+                const track = data.recenttracks.track[0];
+                const isCurrentlyListening = track.hasOwnProperty("@attr");
+
+                let status = isCurrentlyListening ? 'Currently listening to' : 'Last listened to';
+                let trackName = track.name;
+                let artistName = track.artist["#text"];
+
+                document.getElementById('last-played').innerHTML = `
+                    <p>${status}</p>
+                    <h3>${trackName}</h3>
+                    <p>by <strong>${artistName}</strong></p>
+                `;
+            } catch (error) {
+                console.error('Error fetching last played track:', error);
+                document.getElementById('last-played').innerHTML = `
+                    <p>Error fetching last played track.</p>
+                `;
+            }
+        }
+
+        // Call the function to fetch and display the last played track
+        fetchLastPlayed();
+    </script>
+
 </footer>
