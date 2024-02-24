@@ -1,0 +1,42 @@
+// =================
+// DEFAULT FOCUS STYLES
+// =================
+
+a,
+button,
+input,
+textarea {
+    &:focus {
+        outline: 5px solid var(--color-secondary);
+    }
+}
+
+// =================
+// FOCUS-VISIBLE
+// =================
+
+@supports #{'\selector(:focus-visible)'} {
+    // escaped because otherwise Sass throws an error
+    *:focus:not(:focus-visible) {
+        outline: none !important;
+    }
+}
+
+// =================
+// EXCEPTIONS
+// =================
+
+// sections excluded from the tabindex
+[tabindex='-1']:focus {
+    outline: none !important;
+}
+
+// the skip link is only visible on focus
+.sr-skip-link:focus {
+    outline: none;
+}
+
+// links that are both focused AND hovered
+a:focus:hover {
+    outline: none;
+}

@@ -1,0 +1,100 @@
+.fade-in {
+    transform: translate3d(0, 0, 0);
+    backface-visibility: hidden;
+    perspective: 1000px;
+    animation: fadeInUp 0.5s ease;
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes spinner__left-spin {
+    from {
+        transform: rotate(130deg);
+    }
+    50% {
+        transform: rotate(-5deg);
+    }
+    to {
+        transform: rotate(130deg);
+    }
+}
+
+@keyframes spinner__right-spin {
+    from {
+        transform: rotate(-130deg);
+    }
+    50% {
+        transform: rotate(5deg);
+    }
+    to {
+        transform: rotate(-130deg);
+    }
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes rainbow {
+    100%,
+    0% {
+        color: rgb(255, 0, 0);
+    }
+    8% {
+        color: rgb(255, 127, 0);
+    }
+    16% {
+        color: rgb(255, 255, 0);
+    }
+    25% {
+        color: rgb(127, 255, 0);
+    }
+    33% {
+        color: rgb(0, 255, 0);
+    }
+    41% {
+        color: rgb(0, 255, 127);
+    }
+    50% {
+        color: rgb(0, 255, 255);
+    }
+    58% {
+        color: rgb(0, 127, 255);
+    }
+    66% {
+        color: rgb(0, 0, 255);
+    }
+    75% {
+        color: rgb(127, 0, 255);
+    }
+    83% {
+        color: rgb(255, 0, 255);
+    }
+    91% {
+        color: rgb(255, 0, 127);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0s !important;
+        transition-duration: 0s !important;
+    }
+    ::view-transition-group(*),
+    ::view-transition-old(*),
+    ::view-transition-new(*) {
+        animation: none !important;
+    }
+}

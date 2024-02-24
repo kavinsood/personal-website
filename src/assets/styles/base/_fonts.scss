@@ -1,0 +1,17 @@
+@font-face {
+    font-family: 'Noe Display';
+    font-style: normal;
+    font-display: swap;
+    font-weight: 500;
+    src: url('/assets/fonts/noe-display-medium.woff2') format('woff2'),
+        url('/assets/fonts/noe-display-medium.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Lobster';
+    font-style: normal;
+    font-display: auto;
+    font-weight: 400;
+    src: url('/assets/fonts/lobster.woff2') format('woff2'),
+        url('/assets/fonts/lobster.woff') format('woff');
+}

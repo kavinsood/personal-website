@@ -1,0 +1,85 @@
+[
+    {
+        "title": "Lex Fridman",
+        "url": "https://lexfridman.com",
+        "feed": "https://lexfridman.com/feed/podcast/",
+        "description": "Lex is a researcher at MIT, working on human-centered AI, deep learning, autonomous vehicles, and more. His podcast is a treasure trove of knowledge and wisdom.",
+        "twitter": "lexfridman"
+    },
+    {
+        "title": "Elizier Yudkowsky",
+        "url": "https://www.lesswrong.com/users/eliezer_yudkowsky",
+        "feed": "https://www.lesswrong.com/posts.rss",
+        "description": "Elizier is an autodidact and researcher on AI. His writing on decision theory, rationality and AGI is highly interesting to me.",
+        "twitter": "ESYudkowsky"
+    },
+    {
+        "title": "Paul Graham",
+        "url": "http://paulgraham.com",
+        "feed": "http://paulgraham.com/rss.html",
+        "description": "Paul is a co-founder of Y Combinator and a prolific writer. His essays on startups, programming, and life are always worth reading.",
+        "twitter": "paulg"
+    },
+    {
+        "title": "Gwern Branwen",
+        "url": "https://www.gwern.net",
+        "feed": "https://www.gwern.net/feed",
+        "description": "Gwern is a polymath and researcher. His blog is full of interesting essays on a wide range of topics.",
+        "twitter": "gwern"
+    },
+    {
+        "title": "Sam Altman",
+        "url": "https://blog.samaltman.com",
+        "feed": "https://blog.samaltman.com/rss",
+        "description": "sama needs no introduction. He is a crazy accomplished entrepreneur and thinker. He writes about a wide range of topics, including startups, technology, and the future."
+    },
+    {
+        "title": "Derek Sivers",
+        "url": "https://sivers.org",
+        "feed": "https://sivers.org/feed",
+        "description": "Derek is a musician, programmer, writer, and entrepreneur. His blog is full of wisdom and interesting stories.",
+        "twitter": "sivers"
+    },
+    {
+        "title": "Ethan Marcotte",
+        "url": "https://ethanmarcotte.com",
+        "feed": "https://ethanmarcotte.com/wrote/feed.xml",
+        "description": "Ethan wrote the book on responsive web design, but he's also a gifted blogger. His posts cover web culture, technology and life in general.",
+        "twitter": "beep"
+    },
+    {
+        "title": "Tobias Ahlin",
+        "url": "https://tobiasahlin.com",
+        "feed":"https://tobiasahlin.com/feed.xml",
+        "description": "Tobias is a designer, developer and teacher from Stockholm. He's worked for Spotify, Github and Minecraft and has a lot of interesting posts about CSS.",
+        "twitter": "tobiasahlin"
+    },
+    {
+        "title": "Heydon Pickering",
+        "url": "http://www.heydonworks.com",
+        "feed": "http://www.heydonworks.com/feed",
+        "description": "Heydon is a designer and accessibility consultant based in the UK. He wrote 'Inclusive Design', edits for Smashing Magazine and is an excellent speaker on all things a11y.",
+        "twitter": "heydonworks"
+    },
+    {
+        "title": "Oliver Schöndorfer",
+        "url": "https://www.zeichenschatz.net",
+        "feed": "https://www.zeichenschatz.net/feed",
+        "description": "Oliver loves good typography. He runs a design studio in Vienna and is a talented writer and speaker. He has some very interesting posts about web fonts.",
+        "twitter": "glyphe"
+    },
+    {
+        "title": "Una Kravets",
+        "url": "https://una.im",
+        "feed": "https://una.im/feed.xml",
+        "description": "Una is a developer advocate at Google for their Material Design System. She writes about design and development, including great pieces about CSS, SVG and Service Worker.",
+        "twitter": "una"
+    },
+    {
+        "title": "Jonathan Snook",
+        "url": "https://snook.ca",
+        "feed": "https://snook.ca/posts/index.rss",
+        "description": "Snook is a web designer, developer, writer, speaker, sometimes angel investor, and hobbyist photographer. He writes about many facets of modern front-end development and his blog features interesting posts on a variety of topics.",
+        "twitter": "snookca"
+    }
+]

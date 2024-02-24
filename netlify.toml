@@ -1,0 +1,46 @@
+[build]
+    command = "npm run build"
+    publish = "dist"
+    functions = "functions"
+
+[build.environment]
+    NODE_VERSION = "20.11"
+
+[[plugins]]
+    package = "./plugins/webmention-cache"
+
+[[headers]]
+    for = "/*"
+    [headers.values]
+        X-Frame-Options = "DENY"
+        X-XSS-Protection = "1; mode=block"
+        X-Content-Type-Options = "nosniff"
+        Referrer-Policy= "no-referrer-when-downgrade"
+        Permissions-Policy = "interest-cohort=()"
+
+[[headers]]
+  for = "/sw.js"
+  [headers.values]
+    cache-control = "max-age=0,no-cache,no-store,must-revalidate"
+
+# Bots
+[[redirects]]
+    from = "/wp-login.php"
+    to = "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+    status = 302
+    force = true
+
+# Favicon
+[[redirects]]
+    from = "/assets/images/touch/*"
+    to = "/assets/images/favicon/:splat"
+    status = 301
+    force = true
+
+# 404s
+[[redirects]]
+    from = "*"
+    to = "/404"
+    status = 404
+
+# Add link redirects to previously linked articles

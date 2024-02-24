@@ -1,0 +1,38 @@
+---
+layout: base
+eleventyNavigation:
+  key: Home
+  order: 1
+permalink: /
+---
+
+<div class="hero fade-in">
+    <div class="hero__inner">
+        <h1 class="hero__title">I make websites.</h1>
+        <p class="hero__pretitle"><a href="/about/">Hello, my name is Kavin</a></p>
+
+        <div class="hero__content">
+            <p>
+                I'm a CS engineering student and front-end developer.&nbsp;<br class="hero__br" />
+                I lift weights, read and like to build cool tech stuff.
+            </p>
+        </div>
+    </div>
+</div>
+
+{% if collections.featured.length %}
+<div class="u-mb4">
+    <h2>Featured Posts</h2>
+    {% include "featuredposts.njk" %}
+</div>
+{% endif %}
+
+{# 
+<div class="u-mb4">
+    {% signup %}
+    I'm starting an email list for people interested in my writing! 
+    You can join here to be notified first whenever new posts are published. 
+    I'll send emails about once a month and you can unsubscribe any time.
+    {% endsignup %}
+</div> 
+#}

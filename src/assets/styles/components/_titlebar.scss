@@ -1,0 +1,22 @@
+.titlebar {
+    position: fixed;
+    z-index: z('titlebar');
+    left: 0;
+    right: 0;
+    top: 0;
+    height: env(titlebar-area-height, 0);
+    overflow: hidden;
+    background-color: var(--color-bg-offset);
+
+    &__inner {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        position: absolute;
+        height: 100%;
+        width: env(titlebar-area-width, 100%);
+        left: env(titlebar-area-x, 0);
+        -webkit-app-region: drag;
+        app-region: drag;
+    }
+}

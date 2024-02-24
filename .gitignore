@@ -1,0 +1,15 @@
+.env
+node_modules
+dist
+cache
+src/_includes/css
+.cache
+.DS_Store
+Thumbs.db
+sass-cache
+*.log
+npm-debug.*
+*.scssc
+*.swp
+*.lock
+_drafts

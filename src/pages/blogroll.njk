@@ -1,0 +1,35 @@
+---
+layout: base
+title: Blogroll
+subtitle: "Awesome people on the web, in random order."
+description: "A collection of other webdevelopment and design blogs I learn and draw inspiration from."
+permalink: blogroll/index.html
+---
+
+<article class="page">
+    <header class="page__header">
+        <h1 class="page__title">{{ title }}</h1>
+        <p class="page__subtitle">{{ subtitle | safe }}<br /><a href="/blogroll/feeds.xml" class="u-align-middle">{% icon "feed" %} All RSS feeds</a></p>
+    </header>
+
+    <div class="page__content page__content--fullwidth">
+        <ul class="blogroll">
+        {% for item in blogroll|shuffle %}
+
+            <li class="blogroll__item">
+                <div class="blogroll__profile">
+                    <img src="https://v1.indieweb-avatar.11ty.dev/{{ item.url | urlencode }}/" class="blogroll__avatar" width="60" height="60" alt="Avatar image for {{ item.title }}" loading="lazy" decoding="async" />
+                    <div>
+                        <h2 class="blogroll__title">{{ item.title }}</h2>
+                        <a class="blogroll__link" href="{{ item.url }}">{{ item.url }}</a>
+                    </div>
+                </div>
+                {% if item.description %}
+                    <p class="blogroll__desc">{{ item.description }}</p>
+                {% endif %}
+            </li>
+
+        {% endfor %}
+        </ul>
+    </div>
+</article>

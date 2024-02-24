@@ -1,0 +1,15 @@
+{
+    "name": "Kavin Sood",
+    "email": "hello@kavinsood.com",
+    "avatar": "/assets/images/avatar2.jpg",
+    "social": {
+        "twitter": {
+            "name": "itskavins",
+            "url": "https://twitter.com/itskavins"
+        },
+        "github": {
+            "name": "k2s09",
+            "url": "https://github.com/k2s09"
+        }
+    }
+}

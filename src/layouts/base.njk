@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html class="no-js" lang="{{ site.lang }}">
+<!--!
+  Oh so you're an inspector?
+  View the source here: {{ site.repo }}
+-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>{%- if title -%}{{ title }} | {{ site.title }}{%- else -%}{{ site.title }}{%- endif -%}</title>
+        <link rel="preload" href="{{ '/assets/fonts/noe-display-medium.woff2' | url }}" as="font" type="font/woff2" crossorigin>
+        <link rel="preconnect" href="https://webmention.io">
+
+        <link rel="stylesheet" href="{{ '/assets/styles/themes.css' | url }}">
+        <link rel="stylesheet" href="{{ '/assets/styles/main.css' | url }}">
+
+        {% include "meta.njk" %}
+        <script>{% include "initialtheme.njk" %}</script>
+    </head>
+    <body>
+        <a href="#main" class="sr-skip-link">skip to main content</a>
+        {% include "titlebar.njk" %}
+
+        <div class="hfeed layout" role="document">
+            {% include "themepicker.njk" %}
+            {% include "header.njk" %}
+
+            <main class="main container" role="main" id="main" tabindex="-1">
+                {{ content | safe }}
+            </main>
+
+            {% include "footer.njk" %}
+        </div>
+
+        {# Main JS Bundle #}
+        <script src="{{ '/assets/scripts/main.js' | url }}" defer></script>
+        {%- if layout == 'post' or layout == 'note' -%}
+            <script src="{{ '/assets/scripts/webmentions.js' | url }}" defer></script>
+            <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+        {%- endif -%}
+    </body>
+</html>

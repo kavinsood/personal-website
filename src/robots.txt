@@ -1,0 +1,10 @@
+# www.robotstxt.org
+
+User-agent: *
+Disallow: /build.txt
+Disallow: /drafts
+
+User-agent: FacebookBot
+Disallow: /
+
+Sitemap: https://kavinsood.com/sitemap.xml
