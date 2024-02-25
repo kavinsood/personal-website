@@ -4,7 +4,6 @@ const pluginRss = require('@11ty/eleventy-plugin-rss')
 const pluginNavigation = require('@11ty/eleventy-navigation')
 const pluginSyntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight')
 const pluginPageAssets = require('eleventy-plugin-page-assets')
-const pluginShareHighlight = require('eleventy-plugin-share-highlight')
 
 const filters = require('./utils/filters.js')
 const transforms = require('./utils/transforms.js')
@@ -15,7 +14,6 @@ const IS_PRODUCTION = process.env.ELEVENTY_ENV === 'production'
 const CONTENT_GLOBS = {
     posts: 'src/posts/**/*.md',
     drafts: 'src/drafts/**/*.md',
-    notes: 'src/notes/*.md',
     media: '*.jpg|*.png|*.gif|*.mp4|*.webp|*.webm'
 }
 
@@ -30,7 +28,6 @@ module.exports = function (config) {
         assetsMatching: CONTENT_GLOBS.media,
         silent: true
     })
-    config.addPlugin(pluginShareHighlight)
 
     // Filters
     Object.keys(filters).forEach((filterName) => {
@@ -58,7 +55,6 @@ module.exports = function (config) {
     config.addLayoutAlias('page', 'page.njk')
     config.addLayoutAlias('post', 'post.njk')
     config.addLayoutAlias('draft', 'draft.njk')
-    config.addLayoutAlias('note', 'note.njk')
 
     // Pass-through files
     config.addPassthroughCopy('src/site.webmanifest')
@@ -82,11 +78,6 @@ module.exports = function (config) {
         return collection
             .getFilteredByGlob(CONTENT_GLOBS.drafts)
             .filter((item) => item.data.permalink !== false)
-    })
-
-    // Collections: Notes
-    config.addCollection('notes', function (collection) {
-        return collection.getFilteredByGlob(CONTENT_GLOBS.notes).reverse()
     })
 
     // Collections: Featured Posts

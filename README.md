@@ -7,10 +7,3 @@
 Portfolio & Blogs Site.
 Built with Eleventy.
 ```
-
-TBDs:
-
-remove all instances of MXB
-write the about
-figure out notes thing
-add projects section

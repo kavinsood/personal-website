@@ -143,9 +143,6 @@
         .post & {
             margin: 2rem calc(50% - 50vw);
         }
-        .note & {
-            border-radius: 0.5rem;
-        }
 
         > code {
             @include container-narrow;

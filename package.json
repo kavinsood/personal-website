@@ -38,7 +38,6 @@
     "dompurify": "^2.2.6",
     "dotenv": "^8.2.0",
     "eleventy-plugin-page-assets": "github:k2s09/page-plugin-assets",
-    "eleventy-plugin-share-highlight": "^0.1.4",
     "encoding": "^0.1.13",
     "focus-trap": "^5.1.0",
     "html-minifier": "^4.0.0",

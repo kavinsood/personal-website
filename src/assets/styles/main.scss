@@ -44,22 +44,13 @@
 @import 'components/markdown';
 @import 'components/post';
 @import 'components/page';
-@import 'components/note';
 @import 'components/otherposts';
 @import 'components/webmention';
 @import 'components/responsive-image';
 @import 'components/blogroll';
 @import 'components/alert';
 @import 'components/spinner';
-@import 'components/sharer';
 @import 'components/themepicker';
 @import 'components/featuredposts';
 @import 'components/signup';
 @import 'components/callout';
-
-//--------------------
-// VENDOR
-// third-party styles
-//--------------------
-
-@import 'vendor/share-highlight';

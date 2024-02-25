@@ -1,17 +1,11 @@
 {%- set absolutePageUrl -%}{{ page.url | url | absoluteUrl(site.url) }}{%- endset -%}
 {%- set isPost = layout == 'post' -%}
-{%- set isNote = layout == 'note' -%}
 
-{%- if isPost or isNote -%}
-    {# Auto-Generate a Description for Posts and Notes  #}
+{%- if isPost -%}
+    {# Auto-Generate a Description for Posts  #}
     {%- set currentPage = collections.all | currentPage(page) -%}
     {%- set autoDescription = currentPage.templateContent | excerpt | safe | striptags -%}
 {% endif %}
-
-{%- if isNote -%}
-    {# Notes dont have Titles, use the Date  #}
-    {%- set title = page.date | readableDate %}
-{%- endif -%}
 
 {# Page-Specific #}
 <meta name="description" content="{{ description or autoDescription or site.description }}">
@@ -23,8 +17,8 @@
 <meta property="og:image" content="{%- if image -%}{{ absolutePageUrl }}{{ image }}{%- else -%}{{ author.avatar | url | absoluteUrl(site.url) }}{%- endif -%}">
 <meta name="twitter:card" content="{% if isPost -%}summary_large_image{% else %}summary{% endif %}">
 
-{# Posts and Notes Get additional meta tags #}
-{%- if isPost or isNote -%}
+{# Posts get additional meta tags #}
+{%- if isPost -%}
     <meta property="og:type" content="article">
     <meta property="article:published_time" content="{{ page.date | dateToISO }}">
 {%- endif -%}
