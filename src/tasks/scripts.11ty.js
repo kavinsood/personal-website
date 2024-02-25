@@ -6,8 +6,7 @@ const webpack = require('webpack')
 const webpackConfig = require('../../webpack.config')
 
 const ENTRY_POINTS = {
-    main: 'src/assets/scripts/main.js',
-    webmentions: 'src/assets/scripts/webmentions/index.js'
+    main: 'src/assets/scripts/main.js'
 }
 
 module.exports = class {

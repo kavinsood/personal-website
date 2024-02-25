@@ -86,20 +86,8 @@ layout: base
 </article>
 
 {% if not draft %}
-<div class="postsection">
-    <div class="postsection__header">
-        <h3 class="postsection__title u-mb0">Webmentions</h3>
-        <a href="https://indieweb.org/Webmention" class="postsection__info" target="_blank" rel="noopener noreferrer">
-            {% icon "question" %} What’s this?
-        </a>
+    <div class="postsection">
+        <h3 class="postsection__title">Other things I've written</h3>
+        {% include 'otherposts.njk' %}
     </div>
-
-    {%- set webmentionUrl -%}{{ page.url | url | absoluteUrl(site.url) }}{%- endset -%}
-    {% include 'webmentions.njk' %}
-</div>
-
-<div class="postsection">
-    <h3 class="postsection__title">Other things I've written</h3>
-    {% include 'otherposts.njk' %}
-</div>
 {% endif %}
