@@ -46,101 +46,6 @@ const Icon = (iconName, useInline = false) => {
     return minify(output)
 }
 
-const SignupForm = (source) => {
-    const MC = {
-        url: 'https://dev.us21.list-manage.com/subscribe/post',
-        user: '2cfaaaca0a4f15cc65b5333ac2b6dd36-us21',
-        list: '22c086d276'  
-    }
-
-    const examples = [
-        {
-            name: 'Aryan',
-            email: 'Aryan@website.com'
-        },
-        {
-            name: 'Kashvi',
-            email: 'Kashvi@awesome.io'
-        },
-        {
-            name: 'Lakshmi',
-            email: 'Lakshmi@gmail.com'
-        },
-        {
-            name: 'Nina',
-            email: 'Nina@website.com'
-        },
-        {
-            name: 'George',
-            email: 'George@website.com'
-        }
-    ]
-    const placeholder = examples[random(examples.length - 1)]
-    const output = `<form 
-        action="${MC.url}" 
-        method="POST" 
-        class="form form--signup" 
-    >
-        <div class="form__body">
-            <input type="hidden" name="u" value="${MC.user}" />
-            <input type="hidden" name="id" value="${MC.list}" />
-            <input type="hidden" name="SOURCE" value="${source}" />
-
-            <div class="form__fields">
-                <p class="form__field">
-                    <label for="mce-FNAME" class="form__label">First Name (optional)</label>
-                    <input type="text" class="form__input" value="" name="FNAME" id="mce-FNAME" placeholder="${
-                        placeholder.name
-                    }">
-                </p>
-
-                <p class="form__field">
-                    <label for="mce-EMAIL" class="form__label">Email Address</label>
-                    <input type="email" class="form__input" value="" name="EMAIL" id="mce-EMAIL" placeholder="${
-                        placeholder.email
-                    }" required>
-                </p>
-            </div>
-
-            <div class="sr-only" aria-hidden="true">
-                <input type="text" name="b_${MC.user}_${
-        MC.list
-    }" tabindex="-1" value="">
-            </div>
-        </div>
-
-        <div class="form__actions">
-            <button type="submit" class="btn btn--primary" name="subscribe">Subscribe</button>
-            <div class="form__feedback js-signup-widget-feedback" hidden></div>
-            ${Spinner()}
-        </div>
-    </form>`
-
-    return minify(output)
-}
-
-const SignupSection = (title, text, source) => {
-    const form = SignupForm(source)
-    const icon = Icon('check')
-    const output = `
-        <aside class="signup js-signup-widget" data-nosnippet>
-            <div class="signup__front">
-                <h2 class="signup__title">${title}</h2>
-                <div class="signup__desc">
-                    ${text}
-                </div>
-                <div class="signup__form">
-                    ${form}
-                </div>
-            </div>
-            <div class="signup__back js-signup-backside"></div>
-            <div class="signup__icon">${icon}</div>
-        </aside>
-    `
-
-    return minify(output)
-}
-
 const Callout = (content, type = 'info') => {
     let icon
 
@@ -174,6 +79,5 @@ const Callout = (content, type = 'info') => {
 module.exports = {
     Spinner,
     Icon,
-    SignupSection,
     Callout
 }
