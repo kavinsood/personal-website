@@ -23,9 +23,6 @@
                             {{ post.templateContent | excerpt | striptags }}
                         {% endif %}
                     </p>
-                    <span class="featuredpost__likecount" aria-label="{{ likeCount }} Likes">
-                        {% icon "heart" %} {{ likeCount|humanizeNumber }}
-                    </span>
                 </div>
             </div>
         </li>
