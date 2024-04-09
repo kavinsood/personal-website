@@ -3,7 +3,7 @@ title: Article Ideas
 tags: Writing
 description: "Upcoming essays you can look for in the future!"
 featured: true
-featuredImage: moon.webp
+featuredImage: moon.jpg
 featuredImageColor: "#4A2A6D"
 ---
 
