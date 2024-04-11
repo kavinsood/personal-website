@@ -32,6 +32,7 @@ I do this a lot. I hardly publish everything that I write.
    - These deliberations are also my efforts to craft a CS & Math Engineering Note Taking System for College
    - I recognize the most popular and upcoming apps and which ones shine in certain use-cases.
    - This essay is *long* and supposed to be one of my best pieces yet.
+   - This piece is finally out!
 
 ## On the back burner
 ### Personal
