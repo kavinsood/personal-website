@@ -63,6 +63,9 @@
                 `;
             } catch (error) {
                 console.error('Error fetching last played track:', error);
+                document.getElementById('last-played').innerHTML = `
+                    <p>Error fetching last played track.</p>
+                `;
             }
         }
 
