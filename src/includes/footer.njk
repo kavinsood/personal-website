@@ -41,36 +41,4 @@
 
     </div>
     
-    <script>
-        // Function to fetch the last played track
-        async function fetchLastPlayed() {
-            const url = `https://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=Kavin05&api_key=dc458be772a2c1beb5cb3d4878975dfa&format=json&limit=1`;
-
-            try {
-                const response = await fetch(url);
-                const data = await response.json();
-                const track = data.recenttracks.track[0];
-                const isCurrentlyListening = track.hasOwnProperty("@attr");
-
-                let status = isCurrentlyListening ? 'Currently listening to' : 'Last listened to';
-                let trackName = track.name;
-                let artistName = track.artist["#text"];
-
-                document.getElementById('last-played').innerHTML = `
-                    <strong>${status}</strong><br />
-                    <a href="https://last.fm/user/Kavin05" class="p-name u-url"><strong>${trackName}</strong>
-                    by <strong>${artistName}</strong></a>
-                `;
-            } catch (error) {
-                console.error('Error fetching last played track:', error);
-                document.getElementById('last-played').innerHTML = `
-                    <p>Error fetching last played track.</p>
-                `;
-            }
-        }
-
-        // Call the function to fetch and display the last played track
-        fetchLastPlayed();
-    </script>
-
 </footer>
