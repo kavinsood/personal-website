@@ -7,7 +7,7 @@ featuredImage: moon.webp
 featuredImageColor: "#4A2A6D"
 ---
 
-I have come up with several interesting ideas and complex thoughts to pursue and write about in the future. Whenever I take a glance at any of these ideas, I can envision sub-textually exploring them in essays in a couple thousand words.
+I have come up with several interesting ideas and complex thoughts to pursue and write about in the future. Whenever I take a glance at any of these ideas, I can envision sub-textually exploring them in essays in a couple thousand words. Hello there, edited on May 27.
 
 Each topic struck me at some point as an important thing to talk about, and is rich in content, along with so much depth and nuance that can be explored.
 
