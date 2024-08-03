@@ -28,87 +28,56 @@
         }
     },
     {
-        "id": "beach",
-        "name": "Koopa Beach",
+        "id": "solarized-dark",
+        "name": "Solarized Dark",
         "colors": {
-            "primary": "#ff9d00",
-            "secondary": "#bae8e8",
-            "text": "#272343",
-            "border": "#e3f6f5",
-            "background": "#fffffe",
-            "primaryOffset": "#ffca00",
-            "textOffset": "#2d334a",
-            "backgroundOffset": "#e3f6f5"
+            "primary": "#268bd2",
+            "secondary": "#2aa198",
+            "text": "#fdf6e3",
+            "border": "#073642",
+            "background": "#002b36",
+            "primaryOffset": "#268bd2",
+            "textOffset": "#586e75",
+            "backgroundOffset": "#073642"
         }
     },
     {
-        "id": "choco",
-        "name": "Choco Mountain",
+        "id": "dracula",
+        "name": "Dracula",
         "colors": {
-            "primary": "#f3ab87",
-            "secondary": "#e78fb3",
-            "text": "#fffffe",
-            "border": "#271c19",
-            "background": "#55423d",
-            "primaryOffset": "#ffc0ad",
-            "textOffset": "#ffc0ad",
-            "backgroundOffset": "#41312E"
+            "primary": "#ff79c6",
+            "secondary": "#50fa7b",
+            "text": "#f8f8f2",
+            "border": "#44475a",
+            "background": "#282a36",
+            "primaryOffset": "#ff79c6",
+            "textOffset": "#6272a4",
+            "backgroundOffset": "#44475a"
         }
     },
     {
-        "id": "moomoo",
-        "name": "Moo Moo Farm",
+        "id": "gruvbox",
+        "name": "Gruvbox",
         "colors": {
-            "primary": "#f582ae",
-            "secondary": "#8bd3dd",
-            "text": "#172c66",
-            "border": "#f3d2c1",
-            "background": "#fef6e4",
-            "primaryOffset": "#ff3d6a",
-            "textOffset": "#006e8a",
-            "backgroundOffset": "#f3e1d8"
+            "primary": "#fabd2f",
+            "secondary": "#fe8019",
+            "text": "#282828",
+            "border": "#282828",
+            "background": "#ebdbb2",
+            "primaryOffset": "#fabd2f",
+            "textOffset": "#928374",
+            "backgroundOffset": "#d5c4a1"
         }
     },
     {
-        "id": "bowser",
-        "name": "Bowser's Castle",
+        "id": "onedark",
+        "name": "One Dark",
         "colors": {
-            "primary": "#7f5af0",
-            "secondary": "#2cb67d",
-            "text": "#fffffe",
-            "border": "#383a61",
-            "background": "#16161a",
-            "primaryOffset": "#e068fd",
-            "textOffset": "#94a1b2",
-            "backgroundOffset": "#29293e"
-        }
-    },
-    {
-        "id": "yoshi",
-        "name": "Yoshi Valley",
-        "colors": {
-            "primary": "#99C221",
-            "secondary": "#E55812",
-            "text": "#41474C",
-            "border": "#e8e0d9",
-            "background": "#fafbf5",
-            "primaryOffset": "#6E910A",
-            "textOffset": "#757D84",
-            "backgroundOffset": "#f2ede9"
-        }
-    },
-    {
-        "id": "rainbow",
-        "name": "Rainbow Road",
-        "colors": {
-            "primary": "#49f5f7",
-            "secondary": "#01c317",
-            "text": "#feff00",
-            "border": "#d846ff",
-            "background": "#140527",
-            "primaryOffset": "#5dccf8",
-            "textOffset": "#ff464d",
-            "backgroundOffset": "#311b46"
+            "primary": "#61afef",
+            "secondary": "#98c379",
+            "text": "#abb2bf",
+            "border": "#282c34",
+            "background": "#282c34"
         }
     },
     {
