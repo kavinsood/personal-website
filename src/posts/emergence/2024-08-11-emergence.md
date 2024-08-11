@@ -20,7 +20,7 @@ you should position yourself to lessen semantic boundaries, do simple and scalab
 another example is to increase your luck surface area by pursuing new experiences and challenges.
 
 <figure class="extend">
-    <img src="" alt="Opportunity Graph" />
+    <img src="https://github.com/user-attachments/assets/4160bc60-6408-4a82-a1d1-daf2e0cd2f34" alt="Opportunity Graph" />
     <figcaption>Just do things</figcaption>
 </figure>
 
