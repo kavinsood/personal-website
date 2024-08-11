@@ -1,6 +1,6 @@
 ---
 title: Emergence
-tags: ["philosophy", "systems", "ml"]
+tags: ["philosophy", "systems"]
 description: "an emergent algorithm implements a set of simple building block behaviors that when combined exhibit more complex behaviors"
 featured: true
 featuredImage: emerge.webp
@@ -21,7 +21,7 @@ another example is to increase your luck surface area by pursuing new experience
 
 <figure class="extend">
     <img src="https://github.com/user-attachments/assets/4160bc60-6408-4a82-a1d1-daf2e0cd2f34" alt="Opportunity Graph" />
-    <figcaption>Just do things</figcaption>
+    <figcaption>Just do stuff</figcaption>
 </figure>
 
 i was looking at my obsidian vault - where I write, learn, research, read.
