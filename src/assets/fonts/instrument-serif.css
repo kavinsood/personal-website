@@ -13,12 +13,3 @@
     font-weight: 400;
     src: url('/assets/fonts/InstrumentSerif-Italic.ttf') format('truetype');
 }
-
-@font-face {
-    font-family: 'Lobster';
-    font-style: normal;
-    font-display: auto;
-    font-weight: 400;
-    src: url('/assets/fonts/lobster.woff2') format('woff2'),
-        url('/assets/fonts/lobster.woff') format('woff');
-}
