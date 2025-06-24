@@ -10,6 +10,7 @@ const MANIFEST_PATH = path.resolve(
     'manifest.json'
 )
 const DEFAULT_ENTRY = 'src/assets/scripts/main.js'
+const DEFAULT_STYLE = 'src/assets/styles/main.scss'
 
 const getManifest = memoize(async () => {
     if (!IS_PRODUCTION) return {}
@@ -52,7 +53,10 @@ async function viteScriptTag(entry) {
 }
 
 async function viteLinkStylesheetTags(entry) {
-    if (!IS_PRODUCTION) return '' // In dev, Vite handles CSS injection
+    if (!IS_PRODUCTION) {
+        const cssPath = `${VITE_DEV_SERVER}/${DEFAULT_STYLE}`
+        return `<link rel="stylesheet" href="${cssPath}">`
+    }
 
     const { css } = await getUrls(entry)
     return css

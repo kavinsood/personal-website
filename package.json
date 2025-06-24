@@ -12,7 +12,7 @@
     "dev": "NODE_ENV=development run-p dev:* --print-label",
     "dev:eleventy": "eleventy --serve",
     "dev:vite": "vite",
-    "build": "NODE_ENV=production eleventy && vite build",
+    "build": "cross-env NODE_ENV=production vite build && cross-env NODE_ENV=production eleventy",
     "serve": "vite preview",
     "clean": "del-cli dist"
   },

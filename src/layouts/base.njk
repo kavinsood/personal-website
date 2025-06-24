@@ -13,7 +13,7 @@
         <link rel="preload" href="{{ '/assets/fonts/InstrumentSerif-Regular.ttf' | url }}" as="font" type="font/ttf" crossorigin>
         <link rel="stylesheet" href="{{ '/assets/styles/themes.css' | url }}">
         
-        {% if not build.dev and not build.naked %}
+        {% if not build.naked %}
             {% viteLinkStylesheetTags %}
         {% endif %}
 
