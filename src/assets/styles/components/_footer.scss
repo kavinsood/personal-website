@@ -16,15 +16,21 @@
     &__inner {
         display: flex;
         flex-wrap: wrap;
-        align-items: center;
+        align-items: flex-start;
+        gap: 1rem 2rem;
     }
 
     &__item {
-        flex-basis: 50%;
+        flex: 1 1 auto;
+        min-width: 120px;
         margin-bottom: 0.5rem;
 
         &--right {
-            flex-basis: 100%;
+            flex: 0 0 auto;
+            margin-left: auto;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
             margin-bottom: 0;
         }
     }
@@ -41,23 +47,25 @@
     @include mq(md) {
         &__inner {
             flex-wrap: nowrap;
+            align-items: center;
         }
+        
         &__item {
-            flex: 0 0 auto;
-            padding-right: 2.5rem;
-            margin: 0;
+            margin-bottom: 0;
+            
+            &:not(&--right) {
+                padding-right: 2.5rem;
+            }
 
             &--right {
                 margin-left: auto;
-                padding-right: 0 !important;
-                flex-basis: auto;
-                display: block;
+                padding-right: 0;
             }
         }
     }
 
     @include mq(lg) {
-        &__item {
+        &__item:not(&__item--right) {
             padding-right: 4rem;
         }
     }
