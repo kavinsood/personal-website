@@ -9,17 +9,12 @@
   "type": "module",
   "scripts": {
     "start": "npm run dev",
-    "dev": "run-p dev:* --print-label",
+    "dev": "NODE_ENV=development run-p dev:* --print-label",
     "dev:eleventy": "eleventy --serve",
     "dev:vite": "vite",
-    "build": "NODE_ENV=production run-s clean build:vite build:eleventy workbox clean:vite --print-label",
-    "build:eleventy": "eleventy",
-    "build:vite": "vite build",
-    "clean": "del-cli dist",
-    "clean:vite": "del-cli dist/.vite",
-    "serve": "serve dist/",
-    "workbox": "workbox generateSW workbox.config.cjs",
-    "debug": "DEBUG=Eleventy* npm start"
+    "build": "NODE_ENV=production eleventy && vite build",
+    "serve": "vite preview",
+    "clean": "del-cli dist"
   },
   "repository": {
     "type": "git",
