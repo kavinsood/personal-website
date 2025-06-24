@@ -1,4 +1,11 @@
 
+// Module Preload
+import 'vite/modulepreload-polyfill'
+
+// Main Stylesheet
+import '../styles/main.scss'
+
+// Common Modules
 import './modules/navigation'
 import './modules/lazyload'
 import './modules/themepicker'

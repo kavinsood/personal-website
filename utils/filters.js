@@ -1,8 +1,8 @@
-const { DateTime } = require('luxon')
-const sanitizeHTML = require('sanitize-html')
-const random = require('lodash/random')
+import { DateTime } from 'luxon'
+import sanitizeHTML from 'sanitize-html'
+import random from 'lodash/random.js'
 
-module.exports = {
+export default {
     readableDate: function (date, format) {
         // Set to Indian Standard Time (IST)
         const dt = DateTime.fromJSDate(date, { zone: 'Asia/Kolkata' });

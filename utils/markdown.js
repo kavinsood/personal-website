@@ -1,5 +1,5 @@
-const markdownIt = require('markdown-it')
-const markdownItAnchor = require('markdown-it-anchor')
+import markdownIt from 'markdown-it'
+import markdownItAnchor from 'markdown-it-anchor'
 
 const anchorSlugify = (s) =>
     encodeURIComponent(
@@ -16,13 +16,14 @@ const markdown = markdownIt({
     breaks: true,
     typographer: true
 }).use(markdownItAnchor, {
-    permalink: true,
-    permalinkSymbol: '#',
-    permalinkClass: 'heading-anchor',
-    permalinkBefore: true,
+    permalink: markdownItAnchor.permalink.linkInsideHeader({
+        symbol: '#',
+        class: 'heading-anchor',
+        placement: 'before'
+    }),
     permalinkAttrs: () => ({ 'aria-hidden': true }),
     level: 2,
     slugify: anchorSlugify
 })
 
-module.exports = markdown
+export default markdown

@@ -1,7 +1,7 @@
-const components = require('./components.js')
+import components from './components.js'
 const { Icon, Callout } = components
 
-module.exports = {
+export default {
     icon: Icon,
     callout: Callout,
 }

@@ -1,6 +1,8 @@
-const htmlmin = require('html-minifier')
-const markdownIt = require('markdown-it')()
-const random = require('lodash/random')
+import htmlmin from 'html-minifier'
+import markdownIt from 'markdown-it'
+import random from 'lodash/random.js'
+
+const md = markdownIt()
 
 const minify = (content) =>
     htmlmin.minify(content, {
@@ -36,7 +38,7 @@ const Spinner = () => {
 
 const Icon = (iconName, useInline = false) => {
     const spriteUrl = '/assets/icons/icons.sprite.svg'
-    const iconId = `#icon-${iconName}`
+    const iconId = `#svg-${iconName}`
     const href = useInline ? iconId : spriteUrl + iconId
 
     const output = `<svg class="icon icon--${iconName}" role="img" aria-hidden="true" width="24" height="24">
@@ -70,13 +72,13 @@ const Callout = (content, type = 'info') => {
 
     const output = `<div class="callout callout--${type}">
         <span class="callout__icon">${Icon(icon)}</span>
-        <div class="callout__content">${markdownIt.render(content)}</div>
+        <div class="callout__content">${md.render(content)}</div>
     </div>`
 
     return minify(output)
 }
 
-module.exports = {
+export default {
     Spinner,
     Icon,
     Callout

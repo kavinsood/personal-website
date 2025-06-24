@@ -11,9 +11,11 @@
 
         <title>{%- if title -%}{{ title }} | {{ site.title }}{%- else -%}{{ site.title }}{%- endif -%}</title>
         <link rel="preload" href="{{ '/assets/fonts/InstrumentSerif-Regular.ttf' | url }}" as="font" type="font/ttf" crossorigin>
-
         <link rel="stylesheet" href="{{ '/assets/styles/themes.css' | url }}">
-        <link rel="stylesheet" href="{{ '/assets/styles/main.css' | url }}">
+        
+        {% if not build.dev and not build.naked %}
+            {% viteLinkStylesheetTags %}
+        {% endif %}
 
         {% include "meta.njk" %}
         <script>{% include "initialtheme.njk" %}</script>
@@ -36,7 +38,11 @@
             {% include "footer.njk" %}
         </div>
 
-        {# Main JS Bundle #}
-        <script src="{{ '/assets/scripts/main.js' | url }}" defer></script>
+        {% if build.dev %}
+            <script type="module" src="http://localhost:5173/@vite/client"></script>
+            <script type="module" src="http://localhost:5173/src/assets/scripts/main.js"></script>
+        {% else %}
+            {% viteScriptTag %}
+        {% endif %}
     </body>
 </html>

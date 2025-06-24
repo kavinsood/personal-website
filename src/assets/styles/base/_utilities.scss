@@ -58,7 +58,7 @@
 
 .u-desktop-only {
     display: none;
-    @include mq(xl) {
+    @include mq(md) {
         display: block;
     }
 }

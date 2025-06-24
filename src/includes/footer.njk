@@ -38,7 +38,6 @@
                 {% icon "feed" %}
             </a>
         </p>
-
     </div>
     
     <script>
@@ -49,22 +48,31 @@
             try {
                 const response = await fetch(url);
                 const data = await response.json();
-                const track = data.recenttracks.track[0];
-                const isCurrentlyListening = track.hasOwnProperty("@attr");
+                
+                if (data.recenttracks && data.recenttracks.track && data.recenttracks.track[0]) {
+                    const track = data.recenttracks.track[0];
+                    const isCurrentlyListening = track.hasOwnProperty("@attr");
 
-                let status = isCurrentlyListening ? 'Currently listening to' : 'Last listened to';
-                let trackName = track.name;
-                let artistName = track.artist["#text"];
+                    let status = isCurrentlyListening ? 'Currently listening to' : 'Last listened to';
+                    let trackName = track.name;
+                    let artistName = track.artist["#text"];
 
-                document.getElementById('last-played').innerHTML = `
-                    <strong>${status}</strong><br />
-                    <a href="https://last.fm/user/Kavin05" class="p-name u-url"><strong>${trackName}</strong>
-                    by <strong>${artistName}</strong></a>
-                `;
+                    document.getElementById('last-played').innerHTML = `
+                        <strong>${status}</strong><br />
+                        <a href="https://last.fm/user/Kavin05" class="p-name u-url"><strong>${trackName}</strong>
+                        by <strong>${artistName}</strong></a>
+                    `;
+                } else {
+                    document.getElementById('last-played').innerHTML = `
+                        <strong>Music</strong><br />
+                        <a href="https://last.fm/user/Kavin05">Last.fm Profile</a>
+                    `;
+                }
             } catch (error) {
                 console.error('Error fetching last played track:', error);
                 document.getElementById('last-played').innerHTML = `
-                    <p>Error fetching last played track.</p>
+                    <strong>Music</strong><br />
+                    <a href="https://last.fm/user/Kavin05">Last.fm Profile</a>
                 `;
             }
         }
@@ -72,5 +80,4 @@
         // Call the function to fetch and display the last played track
         fetchLastPlayed();
     </script>
-
 </footer>

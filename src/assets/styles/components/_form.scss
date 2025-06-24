@@ -1,0 +1,83 @@
+// ------------------------------
+// Form
+// ------------------------------
+
+.form {
+    &__group {
+        margin-bottom: var(--space-3);
+    }
+
+    &__label {
+        display: block;
+        margin-bottom: var(--space-1);
+        font-weight: 700;
+    }
+
+    &__input {
+        display: block;
+        width: 100%;
+        padding: var(--space-2);
+        border: 2px solid var(--grey-medium);
+        border-radius: var(--radius);
+        font-family: inherit;
+        font-size: var(--text-base);
+        line-height: 1.5;
+        background-color: var(--bg-primary);
+        color: var(--text-primary);
+        transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+
+        &:focus {
+            outline: 0;
+            border-color: var(--accent);
+            box-shadow: 0 0 0 0.2rem rgba(var(--accent-rgb), 0.25);
+        }
+
+        &:invalid {
+            border-color: var(--error);
+        }
+    }
+
+    &__textarea {
+        @extend .form__input;
+        resize: vertical;
+        min-height: 8rem;
+    }
+
+    &__button {
+        display: inline-block;
+        padding: var(--space-2) var(--space-3);
+        border: 2px solid var(--accent);
+        border-radius: var(--radius);
+        background-color: var(--accent);
+        color: var(--white);
+        font-family: inherit;
+        font-size: var(--text-base);
+        font-weight: 700;
+        text-decoration: none;
+        text-align: center;
+        cursor: pointer;
+        transition: all 0.15s ease-in-out;
+
+        &:hover,
+        &:focus {
+            background-color: transparent;
+            color: var(--accent);
+        }
+
+        &:focus {
+            outline: 0;
+            box-shadow: 0 0 0 0.2rem rgba(var(--accent-rgb), 0.25);
+        }
+
+        &:disabled {
+            opacity: 0.65;
+            cursor: not-allowed;
+        }
+    }
+
+    &__help {
+        margin-top: var(--space-1);
+        font-size: var(--text-sm);
+        color: var(--text-secondary);
+    }
+} 
