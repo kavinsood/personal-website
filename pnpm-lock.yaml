@@ -42,8 +42,8 @@ importers:
         specifier: ^16.4.5
         version: 16.5.0
       eleventy-plugin-page-assets:
-        specifier: github:maxboeck/eleventy-plugin-page-assets
-        version: https://codeload.github.com/maxboeck/eleventy-plugin-page-assets/tar.gz/6ec9905f37178a76b93c098213e107c00b4fb38c(@11ty/eleventy@3.1.1)
+        specifier: github:k2s09/page-plugin-assets
+        version: git+https://github.com/k2s09/page-plugin-assets.git#fb124ed52d2368078e59c668a32ce12dfe401c5f(@11ty/eleventy@3.1.1)
       eleventy-plugin-svg-sprite:
         specifier: ^2.4.2
         version: 2.4.5(@11ty/eleventy@3.1.1)
@@ -2047,8 +2047,8 @@ packages:
   electron-to-chromium@1.5.171:
     resolution: {integrity: sha512-scWpzXEJEMrGJa4Y6m/tVotb0WuvNmasv3wWVzUAeCgKU0ToFOhUW6Z+xWnRQANMYGxN4ngJXIThgBJOqzVPCQ==}
 
-  eleventy-plugin-page-assets@https://codeload.github.com/maxboeck/eleventy-plugin-page-assets/tar.gz/6ec9905f37178a76b93c098213e107c00b4fb38c:
-    resolution: {tarball: https://codeload.github.com/maxboeck/eleventy-plugin-page-assets/tar.gz/6ec9905f37178a76b93c098213e107c00b4fb38c}
+  eleventy-plugin-page-assets@git+https://github.com/k2s09/page-plugin-assets.git#fb124ed52d2368078e59c668a32ce12dfe401c5f:
+    resolution: {commit: fb124ed52d2368078e59c668a32ce12dfe401c5f, repo: https://github.com/k2s09/page-plugin-assets.git, type: git}
     version: 0.2.0
     peerDependencies:
       '@11ty/eleventy': '>=0.8.x'
@@ -6488,7 +6488,7 @@ snapshots:
 
   electron-to-chromium@1.5.171: {}
 
-  eleventy-plugin-page-assets@https://codeload.github.com/maxboeck/eleventy-plugin-page-assets/tar.gz/6ec9905f37178a76b93c098213e107c00b4fb38c(@11ty/eleventy@3.1.1):
+  eleventy-plugin-page-assets@git+https://github.com/k2s09/page-plugin-assets.git#fb124ed52d2368078e59c668a32ce12dfe401c5f(@11ty/eleventy@3.1.1):
     dependencies:
       '@11ty/eleventy': 3.1.1
       jsdom: 16.7.0
