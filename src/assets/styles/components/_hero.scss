@@ -21,6 +21,7 @@
 
         @include mq(md) {
             font-size: 5.875rem; //94px
+            letter-spacing: -2px;
         }
     }
     &__pretitle {
