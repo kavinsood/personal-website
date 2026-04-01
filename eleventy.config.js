@@ -6,7 +6,6 @@ import pluginNavigation from '@11ty/eleventy-navigation'
 import pluginSyntaxHighlight from '@11ty/eleventy-plugin-syntaxhighlight'
 import { eleventyImageTransformPlugin as pluginImageTransform } from '@11ty/eleventy-img'
 
-import pluginPageAssets from 'eleventy-plugin-page-assets'
 import pluginSVGSprite from 'eleventy-plugin-svg-sprite'
 
 import filters from './utils/filters.js'
@@ -18,8 +17,7 @@ import viteHelpers from './utils/vite.js'
 const IS_PRODUCTION = process.env.NODE_ENV === 'production'
 const CONTENT_GLOBS = {
     posts: 'src/posts/**/*.md',
-    drafts: 'src/drafts/**/*.md',
-    media: '*.jpg|*.png|*.gif|*.mp4|*.webp|*.webm'
+    drafts: 'src/drafts/**/*.md'
 }
 
 export default function (config) {
@@ -27,12 +25,6 @@ export default function (config) {
     config.addPlugin(pluginRss)
     config.addPlugin(pluginNavigation)
     config.addPlugin(pluginSyntaxHighlight)
-    config.addPlugin(pluginPageAssets, {
-        mode: 'directory',
-        postsMatching: 'src/posts/*/*.md',
-        assetsMatching: CONTENT_GLOBS.media,
-        silent: true
-    })
     config.addPlugin(pluginSVGSprite, {
         path: './src/assets/icons',
         outputFilepath: './dist/assets/icons/icons.sprite.svg'
