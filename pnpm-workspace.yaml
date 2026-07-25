@@ -1,0 +1,5 @@
+packages:
+  - .
+
+overrides:
+  htmlparser2: 8.0.2
