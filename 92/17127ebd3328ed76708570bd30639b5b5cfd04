@@ -1,0 +1,21 @@
+package-lock.json
+  s_fe8765858080dc::t_75eda0bba94fbf 35,42-44,7168-7170,7180-7226,7230-7232,10974-10976
+pnpm-lock.yaml
+  s_fe8765858080dc::t_c9ba83be0a55d1 81-82,3533-3534,7865
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.10",
+  "base_commit_sha": "9217127ebd3328ed76708570bd30639b5b5cfd04",
+  "prompts": {},
+  "sessions": {
+    "s_fe8765858080dc": {
+      "agent_id": {
+        "tool": "opencode",
+        "id": "ses_0655c64a1ffetTiHPYmObPE5VK",
+        "model": "grok-4.5"
+      },
+      "human_author": "Kavin Sood <68739182+kavinsood@users.noreply.github.com>"
+    }
+  }
+}
