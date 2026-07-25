@@ -23,11 +23,3 @@ another example is to increase your luck surface area by pursuing new experience
     <img src="https://github.com/user-attachments/assets/4160bc60-6408-4a82-a1d1-daf2e0cd2f34" alt="Opportunity Graph" />
     <figcaption>Just do stuff</figcaption>
 </figure>
-
-i was looking at my obsidian vault - where I write, learn, research, read.
-
-i removed folders and tagging. instead of applying complexity in structuring thought, I applied it in abstraction.
-
-as a result, i made the process of writing and gathering data intuitive.
-
-i don’t fragment ideas into smaller and smaller files, all interlinked together. i write into large files with thousands of words, and see high level thoughts occur.
