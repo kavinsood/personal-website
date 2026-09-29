@@ -1,0 +1,19 @@
+src/layouts/post.njk
+  s_e6e1b4b4deced2::t_a20b64783d0989 61,93
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.10",
+  "base_commit_sha": "a8c97101bbba1b3f340acbe7a553e0b685f50f4b",
+  "prompts": {},
+  "sessions": {
+    "s_e6e1b4b4deced2": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a0ee54-dbd0-7d30-8b54-68e1929a6507",
+        "model": "unknown"
+      },
+      "human_author": "Kavin Sood <68739182+kavinsood@users.noreply.github.com>"
+    }
+  }
+}
