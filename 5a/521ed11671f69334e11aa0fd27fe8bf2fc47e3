@@ -1,0 +1,21 @@
+src/404.njk
+  s_34f6eabb499adf::t_0d48a485daa13a 3,16
+wrangler.jsonc
+  s_34f6eabb499adf::t_9664f332d9ffb7 1-8
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.10",
+  "base_commit_sha": "5a521ed11671f69334e11aa0fd27fe8bf2fc47e3",
+  "prompts": {},
+  "sessions": {
+    "s_34f6eabb499adf": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a0ee59-db71-7063-a8bd-07a6889a8299",
+        "model": "unknown"
+      },
+      "human_author": "Kavin Sood <68739182+kavinsood@users.noreply.github.com>"
+    }
+  }
+}
